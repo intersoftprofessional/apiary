@@ -189,7 +189,8 @@ List of supported guest-types:
     + `lead_name`: `Gabriel`
     + `lead_email`: `gabriel@prioticket.com`
     + `attractions` (array) - Only returned if city_code(s) are provided in the request
-        + (City response) (array)
+        + (City UKENLOND response)
+        + (City AEDUDUBA response)
     + `code_type`: `QR_CODE`
     + `group_code_value`: `avsc12`
     + `language`: `en`
@@ -293,9 +294,11 @@ List of supported guest-types:
 + `error_details`: `The provided credentials are not valid.` (string)
 
 
-### City response
-+ `UKENLOND`: `Venue A,Venue B,Venue C,Venue D` (string)
-+ `AEDUDUBA`: `Venue A,Venue B` - (Louvre, Eiffel Tower) (string)
+### City UKENLOND response
++ `UKENLOND`: `Venue A,Venue B,Venue C,Venue D` 
+
+### City AEDUDUBA response
++ `AEDUDUBA`: `Venue A,Venue B` - (Louvre, Eiffel Tower)
 
 # Group PrioTicket - Endpoints 
 
