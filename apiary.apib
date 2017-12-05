@@ -26,7 +26,6 @@ The Get City List and the Get Passcode APIs are hosted by PrioTicket. <br>
 
 The request data will be accepted in JSON format only and the response data will also be returned in JSON format.
 
-
 ## Headers
 
 ### Content-Type
@@ -112,14 +111,12 @@ List of supported guest-types:
 ### Get City List valid request
 + `request_type`: `get_city_list` (string, fixed, required) - "get_city_list" for this request
 + `data` (object, fixed-type, required)
-     + `distributor_id`: `1037` (number, required) - Unique identifier for distributor assigned by PrioTicket.
-    
+     + `distributor_id`: `1037` (number, required) - Unique identifier for distributor assigned by PrioTicket.    
 
 ### Get City List valid response
   + `response_type`: `get_city_list` (string, fixed, required) - "get_city_list" for this response
   + `distributor_id`: `1037` (number, required) - Unique identifier for distributor assigned by PrioTicket.
   + `city_list` (array[City])   
-
 
 ### City
 + `London` (object) - Only returned if city_code(s) are provided in request
@@ -160,7 +157,6 @@ List of supported guest-types:
     + `longitude`: `4.917000`
     + `active_venues`: `35`
 
-
 ## Get Passcode
 
 ### Get Passcode valid request
@@ -182,8 +178,7 @@ List of supported guest-types:
          + (Adult Guest request)
          + (Child Guest request)
     + `upfront_payment`: `[0, 1]` (string, optional) - Optional: If blank or 0, upfront payment is not required. 
-    + `additional_remarks` (string, optional) - Additional information for the receiver.
-    
+    + `additional_remarks` (string, optional) - Additional information for the receiver.    
 
 ### Get Passcode valid response
   + `response_type`: `get_passcode` (string, fixed, required) - "get_passcode" for this response
@@ -210,8 +205,7 @@ List of supported guest-types:
 + `guest_email`: `john@gmail.com`
 + `guest_type`: `Child`
 + `guest_age`: `10` (string, optional) - For non-adult guests its recommended to provide the guest_age.            
-+ `code_value`: `XXXXX` - Optional: If code is provided then this code will be activated in the response, else a code will be generated.
-            
++ `code_value`: `XXXXX` - Optional: If code is provided then this code will be activated in the response, else a code will be generated.            
 
 ### Child Guest response
 + `guest_id`: `1`
@@ -237,7 +231,6 @@ List of supported guest-types:
 + `guest_age`: `28`
 + `code_value`: `427ca1`
 
-
 ## Make Payment
 
 ### Make Payment valid request
@@ -257,7 +250,6 @@ List of supported guest-types:
      + `payment_amount`: `21.25` (required)
      + `redeem_date_time`: `2017-11-23T14:00:00+04:00`
 
-
 ### Make Payment valid response
   + `response_type`: `make_payment` (string, fixed, required) - "make_payment" for this response
   + `data` (object)
@@ -273,7 +265,6 @@ List of supported guest-types:
         + Members
             + `SUCCESS`
             + `ERROR`
-
 
 ### Booking direct
 + `ticket_id`: `904` (string, required) - Unique identifier for product / ticket assigned by PrioTicket.
@@ -310,10 +301,7 @@ List of supported guest-types:
 + `guest_age`: `28`
 + `code_value`: `427ca1`
 
-
-
 # Group PrioTicket - Endpoints 
-
 
 ## Get City List [/get_city]
 
@@ -328,7 +316,6 @@ Receiver = Prioticket
 The `request_type` acts as a unique identifier.
 
 ### Get City List [POST]
-
 
 + Request (application/json)
 
@@ -346,9 +333,7 @@ The `request_type` acts as a unique identifier.
 + Response 401 (application/json)
 Authorization Exception
 
-    + Attributes (Authorization Exception)
-     
-     
+    + Attributes (Authorization Exception)    
 
 ## Get Passcode [/getpasscode]
 
@@ -382,8 +367,6 @@ Authorization Exception
 
     + Attributes (Authorization Exception)
     
-
-    
 # Group PGP - Endpoints    
 ## Make Payment [/makepayment]
 
@@ -393,14 +376,10 @@ Initiator = Prioticket
 
 Receiver = Payment Gateway Provider (PGP)
 
-
-
-
 + Test URL: PGP will provide an endpoint to call the test service.
 + Live URL: PGP will provide an endpoint to call the live service.
 
 ### Make Payment [POST]
-
 
 + Request (application/json)
 
@@ -419,8 +398,6 @@ Receiver = Payment Gateway Provider (PGP)
 Authorization Exception
 
     + Attributes (Authorization Exception)
-
-
        
 # Group Errors
 
