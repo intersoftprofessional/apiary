@@ -177,7 +177,7 @@ List of supported guest-types:
      + `guest_details` (array)
          + (Adult Guest request)
          + (Child Guest request)
-    + `upfront_payment`: `[0, 1]` (string, optional) - Optional: If blank or 0, upfront payment is not required. 
+    + `upfront_payment`: `0` (string, optional) - Optional: If blank or 0, upfront payment is not required. If 1 then required. 
     + `additional_remarks` (string, optional) - Additional information for the receiver.    
 
 ### Get Passcode valid response
@@ -197,7 +197,7 @@ List of supported guest-types:
     + `guest_details` (array)
         + (Adult Guest response)
         + (Child Guest response)
-    + `upfront_payment`: `[0, 1]` (string, optional) - Optional: If blank or 0, upfront payment is not required. 
+    + `upfront_payment`: `0` (string, optional) - Optional: If blank or 0, upfront payment is not required. If 1 then required.
 
 ### Child Guest request
 + `guest_id`: `1`
